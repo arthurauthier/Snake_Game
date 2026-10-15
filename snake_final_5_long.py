@@ -3,7 +3,7 @@ import sys
 import random
 import pygame 
 
-FICHIER_SCORES = os.path.join(os.getcwd(), "D:/Snake_Game_github/Snack_Game/high_scores.txt")
+FICHIER_SCORES = os.path.join(os.getcwd(), "D:/Snake_Game_github/Snake_Game/high_scores.txt")
 
 class Jeu:
     def __init__(self):
@@ -33,7 +33,7 @@ class Jeu:
         self.ecran_du_debut = True
 
         try:
-            chemin_image = os.path.join(os.getcwd(), "D:/Snake_Game_github/Snack_Game/tete_serpent.png")
+            chemin_image = os.path.join(os.getcwd(), "D:/Snake_Game_github/Snake_Game/tete_serpent.png")
             self.image_tete_serpent_original = pygame.image.load(chemin_image)
             self.image_tete_serpent_original = pygame.transform.flip(self.image_tete_serpent_original, False, True)
             self.image_tete_serpent = pygame.transform.scale(self.image_tete_serpent_original, (self.serpent_corps, self.serpent_corps))
@@ -43,7 +43,7 @@ class Jeu:
             sys.exit()
 
         try:
-            chemin_son = os.path.join(os.getcwd(), "D:/Snake_Game_github/Snack_Game/game_over.mp3")
+            chemin_son = os.path.join(os.getcwd(), "D:/Snake_Game_github/Snake_Game/game_over.mp3")
             self.son_game_over = pygame.mixer.Sound(chemin_son)
         except pygame.error as e:
             print(f"Erreur lors du chargement du son Game Over : {e}")
